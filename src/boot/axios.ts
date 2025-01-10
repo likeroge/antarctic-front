@@ -14,13 +14,13 @@ declare module 'vue' {
 // good idea to move this instance creation inside of the
 // "export default () => {}" function below (which runs individually
 // for each client)
-console.log(process.env);
 
 const api = axios.create({ baseURL: process.env.VITE_APP_API_URL||'http://localhost:5000/api' });
 // const api = axios.create({ baseURL: 'http://localhost:5000/api' });
 
 export default defineBoot(({ app }) => {
   // for use inside Vue files (Options API) through this.$axios and this.$api
+  console.log(process.env.VITE_APP_API_URL);
 
   app.config.globalProperties.$axios = axios;
   // ^ ^ ^ this will allow you to use this.$axios (for Vue Options API form)
