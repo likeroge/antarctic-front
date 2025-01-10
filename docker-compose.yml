@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  node-app:
+    image: node
+    container_name: nest1
+    environment:
+      - VUE_APP_API_URL=http://185.250.44.151:5000/api
+    volumes:
+      - .:/app
+    ports:
+      - '3000:3000'
+    working_dir: /app
+    command: npm run start:prod
