@@ -14,6 +14,8 @@ declare module 'vue' {
 // good idea to move this instance creation inside of the
 // "export default () => {}" function below (which runs individually
 // for each client)
+console.log(process.env);
+
 const api = axios.create({ baseURL: process.env.VITE_APP_API_URL||'http://localhost:5000/api' });
 // const api = axios.create({ baseURL: 'http://localhost:5000/api' });
 
