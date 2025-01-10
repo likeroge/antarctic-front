@@ -6,6 +6,7 @@ services:
     container_name: quasar
     environment:
       - VITE_APP_API_URL=http://185.250.44.151:5000/api
+      VITE_APP_API_URL: "http://185.250.44.151:5000/api"
     volumes:
       - .:/app
     # ports:
