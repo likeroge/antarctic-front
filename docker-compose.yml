@@ -2,10 +2,10 @@ version: '3.8'
 
 services:
   node-app:
-    image: node
-    container_name: quasar
     environment:
       VITE_APP_API_URL: 'http://185.250.44.151:5000/api'
+    image: node
+    container_name: quasar
     volumes:
       - .:/app
     # ports:
