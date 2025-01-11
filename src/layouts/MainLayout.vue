@@ -13,11 +13,14 @@
         <q-item-label header> Меню</q-item-label>
         <q-item clickable to="/"> Главная </q-item>
         <q-item clickable to="/vehicles"> Транспорт </q-item>
+        <q-item clickable to="/transport-notes"> Учет движения транспорта </q-item>
       </q-list>
     </q-drawer>
 
-    <q-page-container>
-      <router-view />
+    <q-page-container class="bg-grey-2">
+      <q-page padding>
+        <router-view />
+      </q-page>
     </q-page-container>
   </q-layout>
 </template>
