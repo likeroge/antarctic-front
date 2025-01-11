@@ -20,7 +20,6 @@ const api = axios.create({ baseURL: process.env.VITE_APP_API_URL||'http://localh
 
 export default defineBoot(({ app }) => {
   // for use inside Vue files (Options API) through this.$axios and this.$api
-  console.log(process.env.VITE_APP_API_URL);
 
   app.config.globalProperties.$axios = axios;
   // ^ ^ ^ this will allow you to use this.$axios (for Vue Options API form)
